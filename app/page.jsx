@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { withBasePath } from "./lib/withBasePath";
 
 const PROFESSIONALS = [
   {
@@ -49,13 +49,7 @@ export default function Home() {
           {PROFESSIONALS.map((pro) => (
             <Link key={pro.name} className="pro-item" href={pro.href}>
               <div className="pro-icon" aria-hidden="true">
-                <Image
-                  src={pro.icon}
-                  alt=""
-                  width={44}
-                  height={44}
-                  className="pro-icon-image"
-                />
+                <img src={withBasePath(pro.icon)} alt="" className="pro-icon-image" />
               </div>
               <div>
                 <h3 className="pro-name">{pro.name}</h3>
@@ -105,13 +99,10 @@ export default function Home() {
       </section>
 
       <section className="panel photo-panel" aria-label="Photo de la maison médicale">
-        <Image
-          src="/images/maison-medicale.jpg"
+        <img
+          src={withBasePath("/images/maison-medicale.jpg")}
           alt="Maison Médicale Les Images"
-          width={766}
-          height={458}
           className="photo-image"
-          priority
         />
       </section>
     </main>

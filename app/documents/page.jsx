@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { withBasePath } from "../lib/withBasePath";
 
 export const metadata = {
   title: "Maison Médicale Les Images",
@@ -28,57 +28,57 @@ export default function DocumentsPage() {
 
         <div className="docs-block">
           <p className="docs-section-title">Formulaire de médecin traitant</p>
-          <Link
+          <a
             className="docs-link medecin-rdv-link"
-            href="/documents/formulaire-medecin-traitant.pdf"
+            href={withBasePath("/documents/formulaire-medecin-traitant.pdf")}
             download
           >
             Télécharger
-          </Link>
+          </a>
         </div>
 
         <div className="docs-block">
           <p className="docs-section-title">Formulaire de soins à l’étranger</p>
-          <Link
+          <a
             className="docs-link medecin-rdv-link"
-            href="/documents/formulaire-soins-etranger.pdf"
+            href={withBasePath("/documents/formulaire-soins-etranger.pdf")}
             download
           >
             Télécharger
-          </Link>
+          </a>
         </div>
 
         <div className="docs-block">
           <p className="docs-section-title">Attestation de recherche d’emploi</p>
-          <Link
+          <a
             className="docs-link medecin-rdv-link"
-            href="/documents/attestation-recherche-emploi.pdf"
+            href={withBasePath("/documents/attestation-recherche-emploi.pdf")}
             download
           >
             Télécharger
-          </Link>
+          </a>
         </div>
 
         <div className="docs-block">
           <p className="docs-section-title">Frais de transport</p>
-          <Link
+          <a
             className="docs-link medecin-rdv-link"
-            href="/documents/formulaire-frais-transport.pdf"
+            href={withBasePath("/documents/formulaire-frais-transport.pdf")}
             download
           >
             Télécharger
-          </Link>
+          </a>
         </div>
 
         <div className="docs-block">
           <p className="docs-section-title">Demande de capital décès</p>
-          <Link
+          <a
             className="docs-link medecin-rdv-link"
-            href="/documents/demande-capital-deces.pdf"
+            href={withBasePath("/documents/demande-capital-deces.pdf")}
             download
           >
             Télécharger
-          </Link>
+          </a>
         </div>
       </section>
     </main>

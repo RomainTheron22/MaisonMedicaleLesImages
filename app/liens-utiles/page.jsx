@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { withBasePath } from "../lib/withBasePath";
 
 const USEFUL_LINKS = [
   {
@@ -84,11 +84,9 @@ export default function LiensUtilesPage() {
             >
               <div className="useful-link-logo useful-link-logo-top" aria-hidden>
                 {item.logo ? (
-                  <Image
-                    src={item.logo}
+                  <img
+                    src={withBasePath(item.logo)}
                     alt=""
-                    width={220}
-                    height={84}
                     className={`useful-link-logo-image useful-link-logo-image-top ${
                       item.zoom === "soft"
                         ? "useful-link-logo-image-soft"
