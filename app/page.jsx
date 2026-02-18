@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PROFESSIONALS = [
   {
@@ -46,7 +47,7 @@ export default function Home() {
         <h2 className="section-title">Practiciens</h2>
         <div className="pro-list">
           {PROFESSIONALS.map((pro) => (
-            <a key={pro.name} className="pro-item" href={pro.href}>
+            <Link key={pro.name} className="pro-item" href={pro.href}>
               <div className="pro-icon" aria-hidden="true">
                 <Image
                   src={pro.icon}
@@ -59,7 +60,7 @@ export default function Home() {
               <div>
                 <h3 className="pro-name">{pro.name}</h3>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

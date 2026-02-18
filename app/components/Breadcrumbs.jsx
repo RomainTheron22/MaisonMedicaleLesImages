@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const BREADCRUMB_MAP = {
@@ -93,7 +94,7 @@ export default function Breadcrumbs() {
           return (
             <span key={`${item.label}-${index}`} className="breadcrumb-item">
               {item.href && !isLast ? (
-                <a href={item.href}>{item.label}</a>
+                <Link href={item.href}>{item.label}</Link>
               ) : (
                 <span className="breadcrumb-current">{item.label}</span>
               )}

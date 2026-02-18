@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const KINE_SUBMENUS = [
   {
     label: "Informations pratiques",
@@ -26,13 +28,13 @@ export default function KinesitherapeutesPage() {
 
         <div className="kine-submenu-buttons kine-submenu-buttons-compact">
           {KINE_SUBMENUS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="kine-button kine-button-compact"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 

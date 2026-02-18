@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { MENU_ITEMS } from "../menuConfig";
 
@@ -94,22 +95,38 @@ export default function Topbar() {
         const isOpen = Boolean(openMenus[menuKey]);
 
         if (hasChildren) {
+          const href = item.href || "#";
+          const isInternalHref = href.startsWith("/");
           return (
             <li
               key={menuKey}
               className={`menu-item has-children ${isOpen ? "is-open" : ""}`}
             >
-              <a
-                href={item.href || "#"}
-                className={`nav-link nav-toggle level-${level}`}
-                onClick={(event) => handleParentClick(item, menuKey, isOpen, event)}
-                aria-expanded={isOpen}
-                aria-haspopup="true"
-                aria-label={`Afficher le sous-menu ${item.label}`}
-              >
-                <span>{item.label}</span>
-                {level <= 1 ? <span className="caret" aria-hidden="true"></span> : null}
-              </a>
+              {isInternalHref ? (
+                <Link
+                  href={href}
+                  className={`nav-link nav-toggle level-${level}`}
+                  onClick={(event) => handleParentClick(item, menuKey, isOpen, event)}
+                  aria-expanded={isOpen}
+                  aria-haspopup="true"
+                  aria-label={`Afficher le sous-menu ${item.label}`}
+                >
+                  <span>{item.label}</span>
+                  {level <= 1 ? <span className="caret" aria-hidden="true"></span> : null}
+                </Link>
+              ) : (
+                <a
+                  href={href}
+                  className={`nav-link nav-toggle level-${level}`}
+                  onClick={(event) => handleParentClick(item, menuKey, isOpen, event)}
+                  aria-expanded={isOpen}
+                  aria-haspopup="true"
+                  aria-label={`Afficher le sous-menu ${item.label}`}
+                >
+                  <span>{item.label}</span>
+                  {level <= 1 ? <span className="caret" aria-hidden="true"></span> : null}
+                </a>
+              )}
 
               <div className={`submenu submenu-level-${level + 1}`}>
                 {renderMenuItems(item.children, menuKey, level + 1)}
@@ -118,15 +135,19 @@ export default function Topbar() {
           );
         }
 
+        const href = item.href || "#";
+        const isInternalHref = href.startsWith("/");
         return (
           <li key={menuKey} className="menu-item">
-            <a
-              href={item.href || "#"}
-              className={`nav-link level-${level}`}
-              onClick={handleLeafClick}
-            >
-              {item.label}
-            </a>
+            {isInternalHref ? (
+              <Link href={href} className={`nav-link level-${level}`} onClick={handleLeafClick}>
+                {item.label}
+              </Link>
+            ) : (
+              <a href={href} className={`nav-link level-${level}`} onClick={handleLeafClick}>
+                {item.label}
+              </a>
+            )}
           </li>
         );
       })}
@@ -135,10 +156,10 @@ export default function Topbar() {
 
   return (
     <header className="topbar">
-      <a className="brand" href="/" aria-label="Maison Médicale Les Images">
+      <Link className="brand" href="/" aria-label="Maison Médicale Les Images">
         <span className="brand-line brand-main">Maison Médicale</span>
         <span className="brand-line brand-accent">Les Images</span>
-      </a>
+      </Link>
 
       <button
         ref={burgerRef}
