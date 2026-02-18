@@ -459,6 +459,11 @@ a {
   font-size: 16px;
 }
 
+.footer-subtitle-underlined {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer-text {
   margin: 0 0 12px;
   color: #f4c4cf;
@@ -1090,6 +1095,29 @@ a {
   padding: 14px;
 }
 
+.kine-team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kine-team-card {
+  border: 1px dashed rgba(143, 36, 51, 0.24);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.kine-team-card p {
+  margin: 0 0 6px;
+  line-height: 1.45;
+}
+
+.kine-team-card p:last-child {
+  margin-bottom: 0;
+}
+
 .kine-info-block p {
   margin: 0 0 8px;
   color: var(--muted);
@@ -1099,6 +1127,10 @@ a {
 .kine-info-block p:first-child {
   color: #4a1b26;
   font-weight: 800;
+}
+
+.kine-doctor-name {
+  color: #4a1b26 !important;
 }
 
 .kine-section-title {
@@ -1204,6 +1236,11 @@ a {
   width: 100%;
 }
 
+.kine-submenu-buttons-compact {
+  margin-bottom: 14px;
+  gap: 10px;
+}
+
 .photo-slot {
   min-height: 140px;
   border: 1px dashed rgba(143, 36, 51, 0.35);
@@ -1245,6 +1282,76 @@ a {
   box-shadow: 0 10px 20px rgba(47, 32, 36, 0.14);
 }
 
+.kine-button-compact {
+  min-height: 56px;
+  padding: 10px 12px;
+  font-size: 17px;
+}
+
+.medecin-entry + .medecin-entry {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(143, 36, 51, 0.22);
+}
+
+.medecins-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.medecin-card {
+  border: 1px dashed rgba(143, 36, 51, 0.24);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.medecin-card p {
+  margin: 0 0 6px;
+  line-height: 1.45;
+}
+
+.medecin-card p:last-child {
+  margin-bottom: 0;
+}
+
+.medecin-rdv-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 36, 51, 0.45);
+  background: transparent;
+  color: var(--primary-strong);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.medecin-rdv-link:hover {
+  text-decoration: none !important;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(47, 32, 36, 0.12);
+  border-color: rgba(143, 36, 51, 0.72);
+  background: rgba(143, 36, 51, 0.04);
+}
+
+.medecin-final-note {
+  margin-top: 14px !important;
+  padding-top: 14px;
+  border-top: 1px solid rgba(47, 32, 36, 0.1);
+}
+
 @media (max-width: 620px) {
   .kine-page {
     padding: 24px 14px 34px;
@@ -1260,6 +1367,14 @@ a {
 
   .kine-split,
   .kine-split-reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .kine-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medecins-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1288,6 +1403,11 @@ a {
   .kine-button {
     font-size: 19px;
     min-height: 64px;
+  }
+
+  .kine-button-compact {
+    font-size: 16px;
+    min-height: 52px;
   }
 
   .kine-section-title {

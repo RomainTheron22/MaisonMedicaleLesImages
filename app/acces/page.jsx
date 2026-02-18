@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Accès | Maison Médicale Les Images",
+  title: "Maison Médicale Les Images",
   description: "Informations d'accès à la Maison Médicale Les Images.",
 };
 

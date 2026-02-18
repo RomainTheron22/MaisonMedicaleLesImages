@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Équipements | Kinésithérapeutes",
+  title: "Maison Médicale Les Images",
   description: "Équipements modernes du cabinet de kinésithérapie.",
 };
 

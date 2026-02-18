@@ -2,16 +2,16 @@ export const MENU_ITEMS = [
   { label: "Accueil", href: "/" },
   {
     label: "Practiciens",
-    href: "/#practiciens",
+    href: "/",
     children: [
-      { label: "Médecins", href: "/#practiciens" },
-      { label: "Dentistes", href: "/#practiciens" },
+      { label: "Médecins", href: "/medecins" },
+      { label: "Dentistes", href: "/dentistes" },
       {
         label: "Kinésithérapeutes",
         href: "/kinesitherapeutes",
         children: [
           {
-            label: "Rendez-vous & Infos pratiques",
+            label: "Informations pratiques",
             href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
           },
           {
@@ -24,8 +24,8 @@ export const MENU_ITEMS = [
           },
         ],
       },
-      { label: "Infirmiers", href: "/#practiciens" },
-      { label: "Asalées", href: "/#practiciens" },
+      { label: "Infirmiers", href: "/infirmiers" },
+      { label: "Asalées", href: "/asalee" },
     ],
   },
   { label: "Accès", href: "/acces" },

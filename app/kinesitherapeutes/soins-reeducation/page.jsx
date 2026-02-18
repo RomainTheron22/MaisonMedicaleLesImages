@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Soins & Rééducation | Kinésithérapeutes",
+  title: "Maison Médicale Les Images",
   description: "Soins, rééducation et spécialités du cabinet de kinésithérapie.",
 };
 

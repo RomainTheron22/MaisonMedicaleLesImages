@@ -64,7 +64,7 @@ const USEFUL_LINKS = [
 ];
 
 export const metadata = {
-  title: "Liens utiles | Maison Médicale Les Images",
+  title: "Maison Médicale Les Images",
   description: "Liens utiles de la Maison Médicale Les Images.",
 };
 

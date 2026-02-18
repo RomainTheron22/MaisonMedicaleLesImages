@@ -1,6 +1,7 @@
 import "./globals.css";
 import Topbar from "./components/Topbar";
 import Breadcrumbs from "./components/Breadcrumbs";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Maison Médicale Les Images",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <Topbar />
         <Breadcrumbs />
         {children}
+        <Footer />
       </body>
     </html>
   );

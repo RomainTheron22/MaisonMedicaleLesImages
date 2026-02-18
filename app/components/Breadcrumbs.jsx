@@ -7,22 +7,38 @@ const BREADCRUMB_MAP = {
   "/acces": [{ label: "Accès" }],
   "/documents": [{ label: "Documents" }],
   "/liens-utiles": [{ label: "Liens utiles" }],
+  "/medecins": [
+    { label: "Practiciens", href: "/" },
+    { label: "Médecins" },
+  ],
+  "/dentistes": [
+    { label: "Practiciens", href: "/" },
+    { label: "Dentistes" },
+  ],
+  "/infirmiers": [
+    { label: "Practiciens", href: "/" },
+    { label: "Infirmiers" },
+  ],
+  "/asalee": [
+    { label: "Practiciens", href: "/" },
+    { label: "Infirmière Asalée" },
+  ],
   "/kinesitherapeutes": [
-    { label: "Practiciens", href: "/#practiciens" },
+    { label: "Practiciens", href: "/" },
     { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
   ],
   "/kinesitherapeutes/soins-reeducation": [
-    { label: "Practiciens", href: "/#practiciens" },
+    { label: "Practiciens", href: "/" },
     { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
     { label: "Soins & Rééducation" },
   ],
   "/kinesitherapeutes/rendez-vous-infos-pratiques": [
-    { label: "Practiciens", href: "/#practiciens" },
+    { label: "Practiciens", href: "/" },
     { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
-    { label: "Rendez-vous & Infos pratiques" },
+    { label: "Informations pratiques" },
   ],
   "/kinesitherapeutes/equipements": [
-    { label: "Practiciens", href: "/#practiciens" },
+    { label: "Practiciens", href: "/" },
     { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
     { label: "Équipements" },
   ],
@@ -56,6 +72,10 @@ function buildFallback(pathname) {
 export default function Breadcrumbs() {
   const pathname = usePathname();
   const isPracticiensPage =
+    pathname === "/medecins" ||
+    pathname === "/dentistes" ||
+    pathname === "/infirmiers" ||
+    pathname === "/asalee" ||
     pathname === "/kinesitherapeutes" ||
     pathname.startsWith("/kinesitherapeutes/");
 
