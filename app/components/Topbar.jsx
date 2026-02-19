@@ -7,6 +7,7 @@ import { MENU_ITEMS } from "../menuConfig";
 export default function Topbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState({});
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
   const burgerRef = useRef(null);
 
@@ -42,6 +43,30 @@ export default function Topbar() {
     return () => {
       document.removeEventListener("click", handleDocumentClick);
       window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    let previousY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY <= 8) {
+        setIsScrolled(false);
+      } else if (currentY > previousY) {
+        setIsScrolled(true);
+      } else if (currentY < previousY) {
+        setIsScrolled(false);
+      }
+
+      previousY = currentY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -155,7 +180,7 @@ export default function Topbar() {
   );
 
   return (
-    <header className="topbar">
+    <header className={`topbar ${isScrolled ? "topbar-scrolled" : ""}`}>
       <Link className="brand" href="/" aria-label="Maison Médicale Les Images">
         <span className="brand-line brand-main">Maison Médicale</span>
         <span className="brand-line brand-accent">Les Images</span>
