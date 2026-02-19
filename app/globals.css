@@ -1015,12 +1015,9 @@ a {
   }
 
   .home-info-band {
-    width: 100vw;
-    width: 100dvw;
-    margin-left: calc(50% - 50vw);
-    margin-left: calc(50% - 50dvw);
-    margin-right: calc(50% - 50vw);
-    margin-right: calc(50% - 50dvw);
+    width: calc(100% + 28px);
+    margin-left: -14px;
+    margin-right: -14px;
   }
 }
 
