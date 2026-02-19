@@ -1013,6 +1013,15 @@ a {
   .home-hero-title {
     margin-bottom: 8px;
   }
+
+  .home-info-band {
+    width: 100vw;
+    width: 100dvw;
+    margin-left: calc(50% - 50vw);
+    margin-left: calc(50% - 50dvw);
+    margin-right: calc(50% - 50vw);
+    margin-right: calc(50% - 50dvw);
+  }
 }
 
 .info-map {
@@ -1543,6 +1552,16 @@ a {
 #kine-prescrimouv,
 #kine-specialites {
   scroll-margin-top: 130px;
+}
+
+#practiciens {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 620px) {
+  #practiciens {
+    scroll-margin-top: 0;
+  }
 }
 
 .kine-info-block a {

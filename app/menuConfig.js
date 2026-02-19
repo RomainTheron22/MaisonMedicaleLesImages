@@ -2,7 +2,7 @@ export const MENU_ITEMS = [
   { label: "Accueil", href: "/" },
   {
     label: "Nos practiciens",
-    href: "/",
+    href: "/#practiciens",
     children: [
       { label: "Médecins", href: "/medecins" },
       { label: "Dentistes", href: "/dentistes" },
