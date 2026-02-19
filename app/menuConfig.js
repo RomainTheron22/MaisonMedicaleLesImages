@@ -1,7 +1,7 @@
 export const MENU_ITEMS = [
   { label: "Accueil", href: "/" },
   {
-    label: "Practiciens",
+    label: "Nos practiciens",
     href: "/",
     children: [
       { label: "Médecins", href: "/medecins" },
