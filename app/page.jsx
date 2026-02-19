@@ -15,7 +15,7 @@ const PROFESSIONALS = [
   },
   {
     name: "Kinésithérapeutes",
-    href: "/kinesitherapeutes",
+    href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
     icon: "/images/kine.png",
   },
   {

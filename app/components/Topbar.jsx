@@ -89,7 +89,15 @@ export default function Topbar() {
 
   const handleParentClick = (item, menuKey, isOpen, event) => {
     const hasRealHref = Boolean(item.href && item.href !== "#");
+    const clickOnlySubmenu = Boolean(item.clickOnlySubmenu);
     const isMobile = window.matchMedia("(max-width: 860px)").matches;
+
+    if (clickOnlySubmenu) {
+      event.preventDefault();
+      event.stopPropagation();
+      toggleNestedMenu(menuKey);
+      return;
+    }
 
     if (isMobile) {
       if (hasRealHref && isOpen) {
@@ -122,10 +130,13 @@ export default function Topbar() {
         if (hasChildren) {
           const href = item.href || "#";
           const isInternalHref = href.startsWith("/");
+          const clickOnlySubmenu = Boolean(item.clickOnlySubmenu);
           return (
             <li
               key={menuKey}
-              className={`menu-item has-children ${isOpen ? "is-open" : ""}`}
+              className={`menu-item has-children ${clickOnlySubmenu ? "click-only-submenu" : ""} ${
+                isOpen ? "is-open" : ""
+              }`}
             >
               {isInternalHref ? (
                 <Link

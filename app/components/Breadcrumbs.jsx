@@ -26,21 +26,37 @@ const BREADCRUMB_MAP = {
   ],
   "/kinesitherapeutes": [
     { label: "Practiciens", href: "/" },
-    { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
+    {
+      label: "Kinésithérapeute",
+      href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
+      alwaysLink: true,
+    },
   ],
   "/kinesitherapeutes/soins-reeducation": [
     { label: "Practiciens", href: "/" },
-    { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
+    {
+      label: "Kinésithérapeute",
+      href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
+      alwaysLink: true,
+    },
     { label: "Soins & Rééducation" },
   ],
   "/kinesitherapeutes/rendez-vous-infos-pratiques": [
     { label: "Practiciens", href: "/" },
-    { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
-    { label: "Informations pratiques" },
+    {
+      label: "Kinésithérapeute",
+      href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
+      alwaysLink: true,
+    },
+    { label: "Rendez-vous & Informations" },
   ],
   "/kinesitherapeutes/equipements": [
     { label: "Practiciens", href: "/" },
-    { label: "Kinésithérapeute", href: "/kinesitherapeutes" },
+    {
+      label: "Kinésithérapeute",
+      href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
+      alwaysLink: true,
+    },
     { label: "Équipements" },
   ],
 };
@@ -93,7 +109,7 @@ export default function Breadcrumbs() {
           const isLast = index === items.length - 1;
           return (
             <span key={`${item.label}-${index}`} className="breadcrumb-item">
-              {item.href && !isLast ? (
+              {item.href && (!isLast || item.alwaysLink) ? (
                 <Link href={item.href}>{item.label}</Link>
               ) : (
                 <span className="breadcrumb-current">{item.label}</span>

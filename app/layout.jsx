@@ -1,6 +1,5 @@
 import "./globals.css";
 import Topbar from "./components/Topbar";
-import Breadcrumbs from "./components/Breadcrumbs";
 import Footer from "./components/Footer";
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body>
         <Topbar />
-        <Breadcrumbs />
         {children}
         <Footer />
       </body>

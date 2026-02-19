@@ -1,3 +1,11 @@
+import DentistsCarousel from "./DentistsCarousel";
+
+const DENTISTS = [
+  { name: "Docteur Bertrand LEPAIGE", faculty: "Nancy" },
+  { name: "Docteur Pierre THERON", faculty: "Reims" },
+  { name: "Docteur Julie Momper", faculty: "Nancy" },
+];
+
 export const metadata = {
   title: "Maison Médicale Les Images",
   description: "Cabinet dentaire de la Maison Médicale Les Images.",
@@ -5,56 +13,33 @@ export const metadata = {
 
 export default function DentistesPage() {
   return (
-    <main className="kine-page">
-      <section className="kine-panel">
-        <h1 className="kine-title">Dentistes</h1>
+    <main className="kine-page medecins-page dentistes-page">
+      <section className="kine-panel medecins-panel">
+        <h1 className="kine-title medecins-title">Dentistes</h1>
 
-        <div className="kine-info-block">
-          <div className="medecin-entry">
-            <p className="kine-doctor-name">
-              <strong>Docteur Bertrand LEPAIGE</strong>
-            </p>
-            <p>Diplômé de la faculté dentaire de Nancy.</p>
-          </div>
-
-          <div className="medecin-entry">
-            <p className="kine-doctor-name">
-              <strong>Docteur Pierre THERON</strong>
-            </p>
-            <p>Diplômé de la faculté dentaire de Reims.</p>
-          </div>
-
-          <div className="medecin-entry">
-            <p>
-              <strong>Collaborateur :</strong>
-            </p>
-            <p className="kine-doctor-name">
-              <strong>Docteur Maxime MAILLET</strong>
-            </p>
-            <p>Diplômé de la faculté dentaire de Nancy.</p>
-          </div>
+        <div className="kine-info-block medecins-presentation-block">
+          <DentistsCarousel dentists={DENTISTS} />
 
           <p className="medecin-final-note">
-            L’ensemble des dentistes de la maison médicale sont membres d’une AGA et
-            acceptent les règlements par chèques.
+            L’ensemble des dentistes de la maison médicale sont membres d’une AGA et acceptent les
+            règlements par chèques.
           </p>
         </div>
 
-        <div className="kine-info-block">
-          <p className="kine-section-title">Prise de rendez-vous</p>
-          <p>
-            <strong>Secrétariat ouvert :</strong>
-          </p>
-          <p>- Tous les jours <strong>du lundi au vendredi de 07:30 à 19:30.</strong></p>
-          <p>- <strong>Le samedi de 07:30 à 12:30.</strong></p>
-          <p>
-            Prise de rendez-vous sur place ou par téléphone au{" "}
-            <a className="kine-inline-phone" href="tel:+33329346070">
-              <strong>03 29 34 60 70</strong>
-            </a>
-            .
-          </p>
-        </div>
+        <section className="medecins-rdv-band">
+          <div className="medecins-rdv-inner">
+            <p className="kine-section-title medecins-rdv-title">Prise de rendez-vous</p>
+            <p className="infirmiers-rdv-single">
+              <strong>Secrétariat ouvert :</strong> tous les jours du lundi au vendredi de{" "}
+              <strong>07:30 à 19:30</strong>,<br /> et le samedi de <strong>07:30 à 12:30</strong>. <br />
+              Prise de rendez-vous sur place ou par téléphone au{" "}
+              <a className="kine-inline-phone" href="tel:+33329346070">
+                <strong>03 29 34 60 70</strong>
+              </a>
+              .
+            </p>
+          </div>
+        </section>
       </section>
     </main>
   );

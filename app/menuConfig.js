@@ -8,10 +8,11 @@ export const MENU_ITEMS = [
       { label: "Dentistes", href: "/dentistes" },
       {
         label: "Kinésithérapeutes",
-        href: "/kinesitherapeutes",
+        href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
+        clickOnlySubmenu: true,
         children: [
           {
-            label: "Informations pratiques",
+            label: "Rendez-vous & Informations",
             href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
           },
           {
