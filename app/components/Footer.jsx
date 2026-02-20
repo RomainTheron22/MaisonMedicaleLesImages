@@ -1,5 +1,7 @@
 "use client";
 
+import { withBasePath } from "../lib/withBasePath";
+
 function openCookieBanner() {
   if (typeof window === "undefined") {
     return;
@@ -72,8 +74,8 @@ export default function Footer() {
             (c) {currentYear} Maison Médicale Les Images. Tous droits réservés.
           </p>
           <div className="footer-legal-links">
-            <a href="/mentions-legales">Mentions légales</a>
-            <a href="/politique-de-cookies">Politique de cookies</a>
+            <a href={withBasePath("/mentions-legales")}>Mentions légales</a>
+            <a href={withBasePath("/politique-de-cookies")}>Politique de cookies</a>
             <button
               type="button"
               onClick={openCookieBanner}
@@ -81,7 +83,7 @@ export default function Footer() {
             >
               Gérer mes cookies
             </button>
-            <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+            <a href={withBasePath("/politique-de-confidentialite")}>Politique de confidentialité</a>
           </div>
         </div>
       </div>

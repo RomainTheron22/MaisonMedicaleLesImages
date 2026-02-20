@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "../../lib/withBasePath";
 
 export const metadata = {
   title: "Maison Médicale Les Images",
@@ -36,7 +37,7 @@ export default function SoinsReeducationPage() {
           <figure className="kine-inline-photo">
             <Image
               className="kine-inline-photo-image"
-              src="/images/photoskiné/1.webp"
+              src={withBasePath("/images/photoskine/1.webp")}
               alt="Séance de rééducation au cabinet"
               width={4032}
               height={3024}
@@ -84,7 +85,7 @@ export default function SoinsReeducationPage() {
             <figure className="kine-inline-photo-left">
               <Image
                 className="kine-inline-photo-left-image"
-                src="/images/photoskiné/2.webp"
+                src={withBasePath("/images/photoskine/2.webp")}
                 alt="Exercices de rééducation au cabinet"
                 width={3024}
                 height={4032}
@@ -200,7 +201,7 @@ export default function SoinsReeducationPage() {
           <figure className="kine-inline-photo kine-specialites-photo-right">
             <Image
               className="kine-inline-photo-image"
-              src="/images/photoskiné/4.webp"
+              src={withBasePath("/images/photoskine/4.webp")}
               alt="Spécialités du cabinet de kinésithérapie"
               width={3024}
               height={4032}
@@ -256,7 +257,7 @@ export default function SoinsReeducationPage() {
           <figure className="kine-inline-photo-left kine-nourrisson-photo">
             <Image
               className="kine-inline-photo-left-image"
-              src="/images/photoskiné/3.webp"
+              src={withBasePath("/images/photoskine/3.webp")}
               alt="Rééducation du nourrisson"
               width={3024}
               height={4032}
