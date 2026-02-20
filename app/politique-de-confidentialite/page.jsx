@@ -12,9 +12,9 @@ export default function PolitiqueDeConfidentialitePage() {
         <div className="kine-info-block">
           <p className="kine-section-title">Responsable du traitement</p>
           <p>
-            Responsable du traitement : [A RENSEIGNER]
+            Responsable du traitement : Maison Médicale Les Images
             <br />
-            Adresse : [A RENSEIGNER]
+            Adresse : 2 Rue Ernest Renan, 88000 Épinal
             <br />
             E-mail de contact : [A RENSEIGNER]
             <br />
@@ -25,40 +25,49 @@ export default function PolitiqueDeConfidentialitePage() {
         <div className="kine-info-block">
           <p className="kine-section-title">Données collectées</p>
           <p>
-            Le site peut collecter les categories de donnees suivantes : [A RENSEIGNER]
-            (exemples : donnees d'identite, coordonnees, donnees de navigation, etc.).
+            Le site peut collecter les catégories de données suivantes : <br />
+              - données de navigation (adresse IP, type de navigateur, informations techniques nécessaires au fonctionnement du site) <br />
+              - données liées à l'utilisation de la carte Google Maps (cookies Google).
           </p>
         </div>
 
         <div className="kine-info-block">
           <p className="kine-section-title">Finalités du traitement</p>
           <p>
-            Les donnees sont traitees pour les finalites suivantes : [A RENSEIGNER] (exemples :
-            gestion des demandes, prise de rendez-vous, amelioration du service, securite du site).
+            Les données sont traitées pour les finalités suivantes : <br />
+              - assurer le bon fonctionnement et la sécurité du site<br />
+              - permettre l'affichage de la carte Google Maps<br />
+              - améliorer l'expérience utilisateur.
+
           </p>
         </div>
 
         <div className="kine-info-block">
           <p className="kine-section-title">Base légale</p>
           <p>
-            La base legale des traitements est : [A RENSEIGNER] (exemples : consentement, execution
-            d'un contrat, obligation legale, interet legitime).
+            La base légale des traitements est :<br />
+              - l'intérêt légitime du responsable de traitement pour le fonctionnement du site <br />
+              - le consentement de l'utilisateur pour le dépôt de cookies liés à Google Maps. 
+
           </p>
         </div>
 
         <div className="kine-info-block">
           <p className="kine-section-title">Destinataires des données</p>
           <p>
-            Les donnees sont destinees a : [A RENSEIGNER] (services internes, sous-traitants
-            habilites, prestataires techniques, etc.), dans la limite necessaire a leurs missions.
+            Les données sont destinées :<br />
+              - au prestataire d'hébergement du site<br />
+              - à Google dans le cadre de l'affichage de la carte Google Maps.
+
           </p>
         </div>
 
         <div className="kine-info-block">
           <p className="kine-section-title">Durée de conservation</p>
           <p>
-            Les donnees sont conservees pendant la duree strictement necessaire aux finalites
-            poursuivies et conformement aux obligations legales applicables : [A RENSEIGNER].
+            - les données de navigation sont conservées pour une durée maximale de 13 mois <br />
+            - les journaux techniques sont conservés pour une durée limitée conforme aux obligations légales
+
           </p>
         </div>
 

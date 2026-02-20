@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
   --bg: #f8f1f2;
@@ -384,7 +384,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  align-items: center; /* ✅ centre verticalement */
+  align-items: center; /* âœ… centre verticalement */
 }
 
 
@@ -1546,7 +1546,7 @@ a {
   line-height: 1.6;
 }
 
-.kine-info-block p:first-child {
+.kine-info-block > p:first-child {
   color: #4a1b26;
   font-weight: 800;
 }
@@ -1582,7 +1582,8 @@ a {
 #kine-docs,
 #kine-reeducation-generale,
 #kine-prescrimouv,
-#kine-specialites {
+#kine-specialites,
+#kine-equipements {
   scroll-margin-top: 130px;
 }
 
@@ -1765,6 +1766,211 @@ a {
 
 .medecins-page .kine-info-block + .kine-info-block {
   margin-top: 0;
+}
+
+.kine-soins-page {
+  max-width: none;
+  width: 100%;
+  --kine-soins-side-gap: 22px;
+}
+
+.kine-soins-page .kine-panel,
+.kine-soins-page .kine-info-panel {
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+.kine-soins-page .kine-anchor-nav {
+  display: none;
+}
+
+.kine-soins-anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.kine-soins-anchor-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 36, 51, 0.28);
+  background: rgba(143, 36, 51, 0.08);
+  color: var(--primary-strong);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.kine-soins-anchor-link:hover {
+  background: rgba(143, 36, 51, 0.14);
+  border-color: rgba(143, 36, 51, 0.45);
+}
+
+.kine-soins-page .kine-info-block {
+  border: 0;
+  border-top: 1.5px solid rgba(143, 36, 51, 0.28);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 18px 0 0;
+}
+
+.kine-soins-page .kine-info-block + .kine-info-block {
+  margin-top: 34px;
+}
+
+.kine-soins-page #kine-reeducation-generale,
+.kine-soins-page #kine-prescrimouv,
+.kine-soins-page #kine-specialites,
+.kine-soins-page #kine-equipements {
+  scroll-margin-top: 50px;
+}
+
+.kine-soins-page .kine-section-title {
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
+
+.kine-soins-page .kine-info-block p strong,
+.kine-soins-page .kine-info-block p strong > u {
+  color: #4a1b26;
+  text-decoration-color: #4a1b26;
+}
+
+.kine-soins-page .kine-info-block p:not(.kine-section-title) {
+  margin-left: 23px;
+}
+
+.kine-soins-page .kine-inline-text-right p {
+  margin-left: 23px;
+}
+
+.kine-inline-photo {
+  float: right;
+  width: 60%;
+  margin: 6px calc(-1 * var(--kine-soins-side-gap)) 16px 24px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+  border-style: solid;
+  border-color: var(--primary);
+  border-width: 2.5px 0 2.5px 2.5px;
+  box-shadow: none;
+  background: transparent;
+}
+
+.kine-inline-photo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.kine-specialites-photo-right {
+  width: 40%;
+}
+
+.kine-inline-layout-left {
+  clear: both;
+}
+
+.kine-inline-layout-left::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.kine-inline-photo-left {
+  float: left;
+  width: 40%;
+  margin: 6px 24px 16px calc(-1 * var(--kine-soins-side-gap));
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  border-style: solid;
+  border-color: var(--primary);
+  border-width: 2.5px 2.5px 2.5px 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.kine-inline-photo-left-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.kine-nourrisson-photo {
+  clear: both;
+}
+
+@media (max-width: 900px) {
+  .kine-soins-page {
+    --kine-soins-side-gap: 14px;
+  }
+
+  .kine-inline-photo {
+    float: none;
+    width: 100%;
+    margin: 12px calc(-1 * var(--kine-soins-side-gap)) 16px;
+    border-width: 2.5px 0;
+    border-radius: 0;
+  }
+
+  .kine-specialites-photo-right {
+    width: 100%;
+  }
+
+  .kine-inline-photo-left {
+    float: none;
+    width: 100%;
+    margin: 12px calc(-1 * var(--kine-soins-side-gap)) 16px;
+    border-width: 2.5px 0;
+    border-radius: 0;
+  }
+
+  .kine-soins-page .kine-info-block p:not(.kine-section-title) {
+    margin-left: 9px;
+  }
+
+  .kine-soins-page .kine-inline-text-right p {
+    margin-left: 9px;
+  }
+
+}
+
+.kine-soins-page #kine-reeducation-generale::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.kine-soins-page #kine-prescrimouv::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.kine-soins-page #kine-specialites::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.kine-soins-page #kine-equipements::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .medecins-carousel-wrap {
@@ -2287,3 +2493,5 @@ a {
     min-height: 180px;
   }
 }
+
+

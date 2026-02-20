@@ -5,13 +5,13 @@ export const metadata = {
 
 export default function EquipementsPage() {
   return (
-    <main className="kine-page">
+    <main className="kine-page kine-soins-page">
       <section className="kine-info-panel">
         <div className="kine-info-block">
           <p className="kine-section-title">Équipements</p>
           <p>
-            Le cabinet est équipé de matériels modernes permettant d’optimiser la
-            prise en charge :
+            Le cabinet est équipé de matériels modernes permettant d’optimiser la prise en charge
+            :
           </p>
           <p>
             •{" "}
@@ -26,10 +26,10 @@ export default function EquipementsPage() {
             </a>
           </p>
           <p>
-            Pour tendinites, fasciite plantaire, calcifications, douleurs
-            chroniques, épines calcanééenes, canal carpien, hernie discales,
-            arthrose…
+            Pour tendinites, fasciite plantaire, calcifications, douleurs chroniques, épines
+            calcanéennes, canal carpien, hernies discales, arthrose…
           </p>
+
           <p>
             •{" "}
             <strong>
@@ -37,9 +37,9 @@ export default function EquipementsPage() {
             </strong>
           </p>
           <p>
-            Outil de rééducation innovant basé sur le mouvement fonctionnel et le
-            travail en 3D.
+            Outil de rééducation innovant basé sur le mouvement fonctionnel et le travail en 3D.
           </p>
+
           <p>
             •{" "}
             <strong>
@@ -53,14 +53,11 @@ export default function EquipementsPage() {
             </a>
           </p>
           <p>
-            Plateforme technologique dédiée au renforcement, à la rééducation
-            fonctionnelle et au bilan du mouvement, pour la motricité, l’équilibre, la
-            proprioception et la gestion des douleurs.
+            Plateforme technologique dédiée au renforcement, à la rééducation fonctionnelle et au
+            bilan du mouvement, pour la motricité, l’équilibre, la proprioception et la gestion des
+            douleurs.
           </p>
-          <p>
-            Ces technologies permettent une prise en charge plus précise, efficace
-            et motivante.
-          </p>
+          <p>Ces technologies permettent une prise en charge plus précise, efficace et motivante.</p>
         </div>
       </section>
     </main>

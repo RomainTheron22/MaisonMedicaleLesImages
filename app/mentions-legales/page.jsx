@@ -16,13 +16,9 @@ export default function MentionsLegalesPage() {
             <br />
             Forme juridique : [A RENSEIGNER]
             <br />
-            Capital social : [A RENSEIGNER]
-            <br />
             Siege social : [A RENSEIGNER]
             <br />
             SIREN / SIRET : [A RENSEIGNER]
-            <br />
-            Numero TVA intracommunautaire : [A RENSEIGNER]
             <br />
             Telephone : [A RENSEIGNER]
             <br />

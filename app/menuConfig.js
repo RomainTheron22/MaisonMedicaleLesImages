@@ -19,10 +19,6 @@ export const MENU_ITEMS = [
             label: "Soins & Rééducation",
             href: "/kinesitherapeutes/soins-reeducation",
           },
-          {
-            label: "Équipements",
-            href: "/kinesitherapeutes/equipements",
-          },
         ],
       },
       { label: "Infirmiers", href: "/infirmiers" },
