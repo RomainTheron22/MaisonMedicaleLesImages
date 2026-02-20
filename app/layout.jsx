@@ -2,6 +2,7 @@ import "./globals.css";
 import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body>
         <Topbar />
+        <Breadcrumbs />
         {children}
         <CookieBanner />
         <Footer />

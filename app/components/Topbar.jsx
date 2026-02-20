@@ -138,7 +138,19 @@ export default function Topbar() {
                 isOpen ? "is-open" : ""
               }`}
             >
-              {isInternalHref ? (
+              {clickOnlySubmenu ? (
+                <button
+                  type="button"
+                  className={`nav-link nav-toggle level-${level}`}
+                  onClick={(event) => handleParentClick(item, menuKey, isOpen, event)}
+                  aria-expanded={isOpen}
+                  aria-haspopup="true"
+                  aria-label={`Afficher le sous-menu ${item.label}`}
+                >
+                  <span>{item.label}</span>
+                  {level <= 1 ? <span className="caret" aria-hidden="true"></span> : null}
+                </button>
+              ) : isInternalHref ? (
                 <Link
                   href={href}
                   className={`nav-link nav-toggle level-${level}`}

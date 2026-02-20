@@ -16,7 +16,7 @@ export const MENU_ITEMS = [
             href: "/kinesitherapeutes/rendez-vous-infos-pratiques",
           },
           {
-            label: "Soins & Rééducation",
+            label: "Soins et Réeducations",
             href: "/kinesitherapeutes/soins-reeducation",
           },
         ],
