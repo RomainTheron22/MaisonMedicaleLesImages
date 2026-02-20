@@ -6,30 +6,35 @@ const DOCTORS = [
     graduation: "Diplômé de la faculté de médecine de Nancy.",
     convention: "Conventionné secteur 1",
     rdv: "https://www.doctolib.fr/medecin-generaliste/epinal/benoit-leroy",
+    avatar: "/images/Avatar-Practiciens/MedecinHomme2.jpg",
   },
   {
     name: "Docteur Virginie REBORA",
     graduation: "Diplômée de la faculté de médecine de Nancy.",
     convention: "Conventionnée secteur 1",
     rdv: "https://www.doctolib.fr/medecin-generaliste/epinal/virginie-rebora",
+    avatar: "/images/Avatar-Practiciens/MedecinFemme1.jpg",
   },
   {
     name: "Docteur Aurelie JACQUEMET",
     graduation: "Diplômée de la faculté de médecine de Nancy.",
     convention: "Conventionnée secteur 1",
     rdv: "https://www.doctolib.fr/medecin-generaliste/epinal/aurelie-jacquemet",
+    avatar: "/images/Avatar-Practiciens/MedecinFemme1.jpg",
   },
   {
     name: "Docteur Frédéric VILESPY",
     graduation: "Diplômé de la faculté de médecine de Nancy.",
     convention: "Conventionné secteur 1",
     rdv: "https://www.doctolib.fr/medecin-generaliste/epinal/frederic-vilespy",
+    avatar: "/images/Avatar-Practiciens/MedecinHomme2.jpg",
   },
   {
     name: "Docteur Christine WEISBECKER",
     graduation: "Diplômée de la faculté de médecine de Nancy.",
     convention: "Conventionnée secteur 1",
     rdv: "https://www.doctolib.fr/medecin-generaliste/epinal/christine-weisbecker",
+    avatar: "/images/Avatar-Practiciens/MedecinFemme1.jpg",
   },
 ];
 
@@ -48,8 +53,8 @@ export default function MedecinsPage() {
           <DoctorsCarousel doctors={DOCTORS} />
 
           <p className="medecin-final-note">
-            L’ensemble des médecins de la maison médicale sont membres d’une AGA et acceptent
-            les règlements par chèques.
+            L’ensemble des médecins de la maison médicale sont membres d’une AGA et acceptent les
+            règlements par chèques.
           </p>
         </div>
 

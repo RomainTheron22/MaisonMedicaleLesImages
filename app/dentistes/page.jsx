@@ -1,9 +1,21 @@
 import DentistsCarousel from "./DentistsCarousel";
 
 const DENTISTS = [
-  { name: "Docteur Bertrand LEPAIGE", faculty: "Nancy" },
-  { name: "Docteur Pierre THERON", faculty: "Reims" },
-  { name: "Docteur Julie Momper", faculty: "Nancy" },
+  {
+    name: "Docteur Bertrand LEPAIGE",
+    faculty: "Nancy",
+    avatar: "/images/Avatar-Practiciens/DentisteHomme.jpg",
+  },
+  {
+    name: "Docteur Pierre THERON",
+    faculty: "Reims",
+    avatar: "/images/Avatar-Practiciens/DentisteHomme.jpg",
+  },
+  {
+    name: "Docteur Julie Momper",
+    faculty: "Nancy",
+    avatar: "/images/Avatar-Practiciens/DentisteFemme.jpg",
+  },
 ];
 
 export const metadata = {
@@ -31,7 +43,8 @@ export default function DentistesPage() {
             <p className="kine-section-title medecins-rdv-title">Prise de rendez-vous</p>
             <p className="infirmiers-rdv-single">
               <strong>Secrétariat ouvert :</strong> tous les jours du lundi au vendredi de{" "}
-              <strong>07:30 à 19:30</strong>,<br /> et le samedi de <strong>07:30 à 12:30</strong>. <br />
+              <strong>07:30 à 19:30</strong>,<br /> et le samedi de <strong>07:30 à 12:30</strong>.
+              <br />
               Prise de rendez-vous sur place ou par téléphone au{" "}
               <a className="kine-inline-phone" href="tel:+33329346070">
                 <strong>03 29 34 60 70</strong>

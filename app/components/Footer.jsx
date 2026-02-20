@@ -1,3 +1,13 @@
+"use client";
+
+function openCookieBanner() {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.dispatchEvent(new Event("open-cookie-banner"));
+}
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -25,8 +35,7 @@ export default function Footer() {
                 <strong>Médecins :</strong> <a href="tel:+33329340414">03.29.34.04.14</a>
               </li>
               <li>
-                <strong>Kinésithérapeutes :</strong>{" "}
-                <a href="tel:+33329343857">03.29.34.38.57</a>
+                <strong>Kinésithérapeutes :</strong> <a href="tel:+33329343857">03.29.34.38.57</a>
               </li>
               <li>
                 <strong>Dentistes :</strong> <a href="tel:+33329346070">03.29.34.60.70</a>
@@ -44,8 +53,7 @@ export default function Footer() {
             <h4 className="footer-subtitle footer-subtitle-underlined">Urgences et aide</h4>
             <ul className="footer-list footer-list-clean">
               <li>
-                <strong>Médecin de garde :</strong>{" "}
-                <a href="tel:+33820332020">08.20.33.20.20</a>
+                <strong>Médecin de garde :</strong> <a href="tel:+33820332020">08.20.33.20.20</a>
               </li>
               <li>
                 <strong>Pharmacie de garde :</strong> <a href="tel:3237">3237</a>
@@ -64,8 +72,16 @@ export default function Footer() {
             (c) {currentYear} Maison Médicale Les Images. Tous droits réservés.
           </p>
           <div className="footer-legal-links">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
+            <a href="/mentions-legales">Mentions légales</a>
+            <a href="/politique-de-cookies">Politique de cookies</a>
+            <button
+              type="button"
+              onClick={openCookieBanner}
+              className="footer-link-button"
+            >
+              Gérer mes cookies
+            </button>
+            <a href="/politique-de-confidentialite">Politique de confidentialité</a>
           </div>
         </div>
       </div>

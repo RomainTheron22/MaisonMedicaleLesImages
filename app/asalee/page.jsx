@@ -1,3 +1,5 @@
+import { withBasePath } from "../lib/withBasePath";
+
 export const metadata = {
   title: "Maison Médicale Les Images",
   description: "Consultations Infirmière Asalée de la Maison Médicale Les Images.",
@@ -11,7 +13,13 @@ export default function AsaleePage() {
 
         <div className="kine-info-block medecins-presentation-block">
           <article className="medecins-carousel-card medecins-carousel-card-center asalee-single-card">
-            <div className="medecin-avatar-slot" aria-hidden="true"></div>
+            <div className="medecin-avatar-slot" aria-hidden="true">
+              <img
+                src={withBasePath("/images/Avatar-Practiciens/InfirmiereFemme.jpg")}
+                alt=""
+                className="medecin-avatar-image"
+              />
+            </div>
             <p className="kine-doctor-name">
               <strong>Mme POCARD Carole</strong>
             </p>

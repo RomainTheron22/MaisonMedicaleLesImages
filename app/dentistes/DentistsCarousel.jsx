@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { withBasePath } from "../lib/withBasePath";
 
 function wrapIndex(index, total) {
   return (index + total) % total;
@@ -95,7 +96,15 @@ export default function DentistsCarousel({ dentists }) {
             key={`${slot}-${dentist.name}`}
             className={`medecins-carousel-card medecins-carousel-card-${slot}`}
           >
-            <div className="medecin-avatar-slot" aria-hidden="true"></div>
+            <div className="medecin-avatar-slot" aria-hidden="true">
+              {dentist.avatar ? (
+                <img
+                  src={withBasePath(dentist.avatar)}
+                  alt=""
+                  className="medecin-avatar-image"
+                />
+              ) : null}
+            </div>
             <p className="kine-doctor-name">
               <strong>{dentist.name}</strong>
             </p>

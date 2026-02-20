@@ -1,5 +1,5 @@
 {
-  "deploy": "gh-pages -d out", 
+  "deploy": "gh-pages -d out",
   "name": "web-mm-lesimages",
   "version": "1.0.0",
   "private": true,
@@ -15,6 +15,9 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@types/node": "25.3.0",
+    "@types/react": "19.2.14",
+    "gh-pages": "^6.3.0",
+    "typescript": "5.9.3"
   }
 }

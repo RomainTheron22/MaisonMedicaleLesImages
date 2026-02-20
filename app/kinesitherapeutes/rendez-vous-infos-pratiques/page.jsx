@@ -5,21 +5,25 @@ const KINES = [
     name: "Cécile LECOMTE",
     adeli: "887010957",
     rpps: "10005414759",
+    avatar: "/images/Avatar-Practiciens/KineFemme1.jpg",
   },
   {
     name: "Victor LECOMTE",
     adeli: "887011187",
     rpps: "10005518948",
+    avatar: "/images/Avatar-Practiciens/KineHomme.jpg",
   },
   {
     name: "Noémie MACQUET",
     adeli: "887012136",
     rpps: "100056286222",
+    avatar: "/images/Avatar-Practiciens/KineFemme1.jpg",
   },
   {
     name: "Mathilde WADDELL",
     adeli: "887005411",
     rpps: "10111010806",
+    avatar: "/images/Avatar-Practiciens/KineFemme1.jpg",
   },
 ];
 
@@ -50,7 +54,9 @@ export default function RendezVousInformationsPage() {
           <div className="medecins-rdv-inner">
             <div className="medecins-rdv-grid kines-rdv-grid">
               <div className="medecins-rdv-col">
-                <p className="kine-section-title"><strong>Prise de rendez-vous</strong></p>
+                <p className="kine-section-title">
+                  <strong>Prise de rendez-vous</strong>
+                </p>
                 <p>
                   Secrétariat ouvert : tous les jours du lundi au vendredi de{" "}
                   <strong>07:30 à 19:30</strong>, et le samedi de{" "}
@@ -66,7 +72,9 @@ export default function RendezVousInformationsPage() {
               </div>
 
               <div className="medecins-rdv-col">
-                <p className="kine-section-title"><strong>Tarifs et prise en charge</strong>  </p>
+                <p className="kine-section-title">
+                  <strong>Tarifs et prise en charge</strong>
+                </p>
                 <p>Le cabinet pratique les tarifs conventionnés et accepte :</p>
                 <p>- Le tiers payant</p>
                 <p>- La CMU / CSS</p>
@@ -76,7 +84,9 @@ export default function RendezVousInformationsPage() {
               </div>
 
               <div className="medecins-rdv-col">
-                <p className="kine-section-title"><strong>Documents nécessaires</strong></p>
+                <p className="kine-section-title">
+                  <strong>Documents nécessaires</strong>
+                </p>
                 <p>Pour votre rendez-vous, merci de vous munir :</p>
                 <p>- De votre ordonnance</p>
                 <p>- De votre carte Vitale</p>
